@@ -1,17 +1,13 @@
 public class Main {
     public static void main(String[] args) {
-        Ninja naruto = new Ninja();
-        naruto.nomeNinja = "Naruto Uzumaki";
-        naruto.chakra = 100;
-        naruto.jutsu = "Rasengan";
+        Uchiha sasuke = new Uchiha("Sasuke Uchiha", 90, "Chidori", true);
+        sasuke.mostrarInfo();
+        sasuke.usarJutsu();
+        sasuke.mostrarInfo();
+
+        Uzumaki naruto = new Uzumaki("Naruto Uzumaki", 150, "Rasengan", true);
         naruto.mostrarInfo();
         naruto.usarJutsu();
         naruto.mostrarInfo();
-
-        Ninja sasuke = new Ninja();
-        sasuke.nomeNinja = "Sasuke Uchiha";
-        sasuke.chakra = 90;
-        sasuke.jutsu = "Chidori";
-        sasuke.mostrarInfo();
     }
 }
