@@ -2,11 +2,21 @@ public abstract class Ninja {
     private String nomeNinja;
     private int chakra;
     private String jutsu;
+    private int chakraMax;
 
     public Ninja(String nomeNinja, int chakra, String jutsu) {
         this.nomeNinja = nomeNinja;
         this.chakra = chakra;
         this.jutsu = jutsu;
+        this.chakraMax = chakra;
+    }
+
+    public int getChakraMax() {
+        return chakraMax;
+    }
+
+    public void setChakraMax(int chakraMax) {
+        this.chakraMax = chakraMax;
     }
 
     public String getNomeNinja() {
@@ -50,4 +60,15 @@ public abstract class Ninja {
 
     public abstract void mostrarInfo();
 
+    public void recarregarChakra(int recarregarC) {
+        setChakra(this.chakra + recarregarC);
+        if (getChakra() > getChakraMax()) {
+            setChakra(this.chakraMax);
+            System.out.println("Chakra no limite permitido");
+            System.out.println("--------------------------");
+        } else {
+            System.out.println("Chakra recarregado com sucesso");
+            System.out.println("--------------------------");
+        }
+    }
 }
